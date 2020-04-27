@@ -17,7 +17,7 @@ simply
 git clone [this repo name]
 ```
 and open asteroids.html in a browser and you should see something like:
-[basic-browser-load](./res/images/basic-browser-load.png)
+![](./res/images/basic-browser-load.png)
 
 ## running tests
 
