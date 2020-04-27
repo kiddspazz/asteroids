@@ -2,6 +2,19 @@
 
 this is a personal project in which i emulate the original 1979 <a href='https://en.wikipedia.org/wiki/Asteroids_(video_game)'>asteroids</a> on atari. i'm not trying to get it exactly the same, just close.
 
+TOC
+[getting started](#getting-started)
+[prerequisites](#prerequisites)
+[installing](#installing)
+[running tests](#running-tests)
+[deployment](#deployment)
+[built with](#built-with)
+[contributing](#contributing)
+[versioning](#versioning)
+[authors](#authors)
+[license](#license)
+[acknowledgements](#acknowledgements)
+
 ## getting started
 
 here's how you run this guy:
