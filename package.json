@@ -1,0 +1,28 @@
+{
+  "name": "asteroids",
+  "version": "0.0.1",
+  "description": "this is a personal project in which i emulate the original 1979 <a href='https://en.wikipedia.org/wiki/Asteroids_(video_game)'>asteroids</a> on atari. i'm not trying to get it exactly the same, just close.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiddspazz/asteroids.git"
+  },
+  "keywords": [],
+  "author": "kiddspazz (https://www.travish.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kiddspazz/asteroids/issues"
+  },
+  "homepage": "https://github.com/kiddspazz/asteroids#readme",
+  "dependencies": {
+    "firebase": "^7.14.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2"
+  }
+}
