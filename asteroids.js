@@ -204,14 +204,6 @@
     }
   };
 
-  function rotate(point, d) {
-    let angle = d * Math.PI/180;
-    let newPoint = {x: 0, y: 0}
-    newPoint.x = (point.x * (Math.cos(angle)) - point.y * (Math.sin(angle)));
-    newPoint.y = (point.y * (Math.cos(angle)) + point.x * (Math.sin(angle)));
-    return newPoint;
-  }
-
   function Keyboarder() {
     var keyState = {};
 
@@ -507,6 +499,20 @@
     entities.push(new Asteroid(AsteroidSize, p.x, p.y, newV));
   };
 
+<<<<<<< HEAD
   tick();
 
 }());
+=======
+  game(canvas);
+
+  firebase.database.highScore = 400;
+
+  window.addEventListener("keypress", function(e) {
+    if (e.keyCode === 82) {
+      game(canvas);
+    }
+  })
+
+}());
+>>>>>>> master
