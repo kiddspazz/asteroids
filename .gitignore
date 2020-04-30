@@ -11,6 +11,12 @@ yarn-error.log*
 # Optional npm cache directory
 .npm
 
+# Ignore everything in .yarn except releases and plugins, plus also anything with .pnp
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+.pnp.*
+
 # dotenv environment variables file
 .env*
 
