@@ -1,4 +1,4 @@
-import rotate from './rotate';
+import { rotate } from '../utils';
 
 class Spark {
   constructor(point, d) {

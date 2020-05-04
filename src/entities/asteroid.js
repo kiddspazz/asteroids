@@ -1,5 +1,4 @@
-import rotate from './rotate';
-import config from '../config';
+import { rotate } from '../utils';
 
 const addThreeNewAsteroids = (array, i) => {
   for (let j = 0; j < 3; j += 1) {
@@ -9,13 +8,13 @@ const addThreeNewAsteroids = (array, i) => {
       x: rotate({ x: 0, y: -30 }, d).x + array[i].x,
       y: rotate({ x: 0, y: -30 }, d).y + array[i].y,
     };
-    const velocity = -Math.random() * (Math.sqrt(config.asteroidStartSize / (newRadius * 2)));
+    const velocity = -Math.random() * (Math.sqrt(14 / (newRadius * 2)));
     const newVector = rotate({ x: 0, y: velocity }, d);
     array.push(new Asteroid(newRadius, newCenter.x, newCenter.y, newVector));
   }
 };
 
-class Asteroid {
+export default class Asteroid {
   constructor(radius, x, y, vector) {
     this.x = x;
     this.y = y;
@@ -79,5 +78,3 @@ class Asteroid {
     array.splice(i, 1);
   }
 }
-
-export default Asteroid;

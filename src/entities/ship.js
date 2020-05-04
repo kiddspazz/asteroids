@@ -1,5 +1,4 @@
-import config from '../config';
-import rotate from './rotate';
+import { rotate } from '../utils';
 import Bullet from './bullet';
 import Asteroid from './asteroid';
 
@@ -24,7 +23,7 @@ const Keyboarder = () => {
 export default class Ship {
   constructor(lives, color) {
     this.lives = lives;
-    this.center = { x: config.width / 2, y: config.height / 2 };
+    this.center = { x: 600 / 2, y: 600 / 2 };
     this.degreesFromNorth = 0;
     this.vector = { x: 0, y: 0 };
     this.keyboarder = new Keyboarder();
@@ -96,11 +95,11 @@ export default class Ship {
 
     // add v to this.x and this.y
     this.center.x += this.vector.x;
-    if (this.center.x > config.width) { this.center.x = 0; }
-    if (this.center.x < 0) { this.center.x = config.width; }
+    if (this.center.x > 600) { this.center.x = 0; }
+    if (this.center.x < 0) { this.center.x = 600; }
     this.center.y += this.vector.y;
-    if (this.center.y > config.height) { this.center.y = 0; }
-    if (this.center.y < 0) { this.center.y = config.height; }
+    if (this.center.y > 600) { this.center.y = 0; }
+    if (this.center.y < 0) { this.center.y = 600; }
 
     // bullets!
     const bulletCenter = { x, y };

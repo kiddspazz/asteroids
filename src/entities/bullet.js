@@ -1,5 +1,3 @@
-import config from '../config';
-
 class Bullet {
   constructor(vector, center) {
     this.vector = vector;
@@ -23,9 +21,9 @@ class Bullet {
     this.center.x += 5 * Math.sin(this.vector);
     this.center.y += -5 * Math.cos(this.vector);
 
-    if (this.center.x > config.width
+    if (this.center.x > 600
       || this.center.x < 0
-      || this.center.y > config.height
+      || this.center.y > 600
       || this.center.y < 0
     ) { entities.splice(entities.indexOf(this), 1); }
   }
