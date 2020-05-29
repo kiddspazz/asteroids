@@ -1,7 +1,6 @@
 import config from './config/config.json'; 
 import Asteroid from './entities/asteroid';
 import Bullet from './entities/bullet';
-import Spark from './entities/spark';
 import Ship from './entities/ship';
 import { setupFirebase } from './utils.js';
 // Add the Firebase services that you want to use.
@@ -29,7 +28,6 @@ const initNewGame = () => {
     level: 1,
     gameOver: false,
     entities: [],
-    explosion: [],
     highScore: getHighScore(),
     highScorer: getHighScorer(),
   };
@@ -184,11 +182,7 @@ const updateEntites = (entities) => {
     entities[i].draw(ctx);
     entities[i].update(entities);
   }
-  for (let i = 0; i < explosion.length; i += 1) {
-    explosion[i].draw(ctx);
-    explosion[i].update(explosion);
-  }
-  
+
   const asteroids = entities.reduce((tot, cur) => {
     if (cur instanceof Asteroid) { return tot + 1; } return tot;
   }, 0);
@@ -200,15 +194,6 @@ const initNewLevel = (entities, level) => {
     const p = new Placement();
     const newV = { x: Math.random() * 0.5, y: Math.random() * 0.5 };
     entities.push(new Asteroid(config.asteroidStartSize, p.x, p.y, newV));
-  }
-};
-
-// this should trigger on ship collision
-const makeExplosion = (point) => {
-  const sparks = Math.floor((Math.random() * 45) + 20);
-  for (let i = 0; i < sparks; i += 1) {
-    const d = 360 - (i * (360 / sparks));
-    explosion.push(new Spark(point, d));
   }
 };
 

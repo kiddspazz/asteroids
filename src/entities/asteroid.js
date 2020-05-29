@@ -1,4 +1,4 @@
-import { rotate } from '../utils';
+import { rotate, vector } from '../utils';
 
 const addThreeNewAsteroids = (array, i) => {
   for (let j = 0; j < 3; j += 1) {
